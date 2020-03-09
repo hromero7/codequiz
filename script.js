@@ -142,10 +142,10 @@ $(document).ready(function() {
 
         questionEl.text(quizQuestions[0].question); 
 
-        $("#choiceA").text(quizQuestions[0].answers.a);
-        $("#choiceB").text(quizQuestions[0].answers.b);
-        $("#choiceC").text(quizQuestions[0].answers.c);
-        $("#choiceD").text(quizQuestions[0].answers.d);
+        $("#choiceA").text("a: " + quizQuestions[0].answers.a);
+        $("#choiceB").text("b: " + quizQuestions[0].answers.b);
+        $("#choiceC").text("c: " + quizQuestions[0].answers.c);
+        $("#choiceD").text("d: " + quizQuestions[0].answers.d);
 
 
 var counter=setInterval(timer, 1000);
@@ -169,7 +169,6 @@ function timer()
   //Do code for showing the number of seconds here
   $("#time").text(count); 
 }
-        
         
 
     });
@@ -201,10 +200,10 @@ function timer()
         newQuestion.text(quizQuestions[currentQuestion].question);
         $("#container").prepend(newQuestion); 
 
-        $("#choiceA").text(quizQuestions[currentChoices].answers.a);
-        $("#choiceB").text(quizQuestions[currentChoices].answers.b);
-        $("#choiceC").text(quizQuestions[currentChoices].answers.c);
-        $("#choiceD").text(quizQuestions[currentChoices].answers.d);
+        $("#choiceA").text("a: "+ quizQuestions[currentChoices].answers.a);
+        $("#choiceB").text("b: " + quizQuestions[currentChoices].answers.b);
+        $("#choiceC").text("c: " + quizQuestions[currentChoices].answers.c);
+        $("#choiceD").text("d: " + quizQuestions[currentChoices].answers.d);
 
         currentQuestion++; 
         currentChoices++; 
@@ -223,7 +222,38 @@ function timer()
 
 });
 
+$("#highscore").on("click", function() {
+    $(".homepage").hide(); 
+    $("#highscore-page").show(); 
+    $("#back").show();
+    $("#clear").show(); 
+});
 
+$("#back").on("click", function() {
+    $(".homepage").show();
+    $("#highscore-page").hide(); 
+    $("#back").hide();
+    $("#clear").hide(); 
+    location.reload(true); 
+
+});
+
+$("#clear").on("click", function() {
+    $("#submitted-score").empty(); 
+})
+
+$("#submit-score").on("click", function(event) {
+    event.preventDefault(); 
+    $(".homepage").hide(); 
+    $("#game-over").hide(); 
+    $("#highscore-page").show(); 
+    $("#back").show();
+    $("#clear").show(); 
+    var initials = $("#initials").val(); 
+    localStorage.setItem("getValue", initials);
+    $("#submitted-score").text(localStorage.getItem("getValue") + ": " + count); 
+
+})
 
 
 

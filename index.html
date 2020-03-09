@@ -27,8 +27,6 @@
         </div>
         <div id="controls">
             <button id="start-btn" class="quiz-controls homepage">Start Quiz</button>
-            <button id="back" class="quiz-controls hide">Go Back</button>
-            <button id="clear" class="quiz-controls hide">Clear Highscores</button>
 
         </div>
 
@@ -37,9 +35,17 @@
             <p id="final-score">Your Final Score is</p>
             <form>
                 <label>Enter Initials</label>
-                <input type="text"></input>
+                <input id="initials" type="text">
                 <button id="submit-score" class="quiz-controls hide">Submit</button>
             </form>
+
+        </div>
+
+        <div id="highscore-page" class="hide">
+            <h1>Highscores</h1>
+            <p id="submitted-score">1. HR - 100</p>
+            <button id="back" class="quiz-controls hide">Go Back</button>
+            <button id="clear" class="quiz-controls hide">Clear Highscores</button>
 
         </div>
 
