@@ -58,7 +58,7 @@
 
 #answer-btn {
  text-align: center;
-
+ 
 }
 
 .button {
@@ -67,7 +67,9 @@
     border-radius: 10px; 
     color: white; 
     margin-bottom: 20px;
-    
+    display: flex; 
+    margin-left: 350px; 
+    margin-top: 50px; 
 
 }
 
@@ -94,4 +96,11 @@
 
 .hide {
     display: none; 
+}
+
+#game-over {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 34px;
+    margin-bottom: 20px; 
 }

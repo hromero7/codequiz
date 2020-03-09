@@ -16,20 +16,30 @@
             </div>
         </div>
     <div id="container">
-        <div id="start-page">Coding Quiz Challenge!</div>
-        <div id="description">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score time by ten seconds!</div>
+        <div id="start-page" class="homepage">Coding Quiz Challenge!</div>
+        <div id="description" class="homepage">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score time by ten seconds!</div>
         <div id="question" class="hide">Question Placeholder Text?</div>
         <div id="answer-btn" class="hide">
-            <button class="button">Answer 1</button>
-            <button class="button">Answer 2</button>
-            <button class="button">Answer 3</button>
-            <button class="button">Answer 4</button>
+            <button id="choiceA" class="button" value="a">Answer 1</button>
+            <button id="choiceB" class="button" value="b">Answer 2</button>
+            <button id="choiceC" class="button" value="c">Answer 3</button>
+            <button id="choiceD" class="button" value="d">Answer 4</button>
         </div>
         <div id="controls">
-            <button id="start-btn" class="quiz-controls">Start Quiz</button>
-            <button id="submit-score" class="quiz-controls hide">Submit</button>
+            <button id="start-btn" class="quiz-controls homepage">Start Quiz</button>
             <button id="back" class="quiz-controls hide">Go Back</button>
             <button id="clear" class="quiz-controls hide">Clear Highscores</button>
+
+        </div>
+
+        <div id="game-over" class="hide">
+            <p>All done!</p>
+            <p id="final-score">Your Final Score is</p>
+            <form>
+                <label>Enter Initials</label>
+                <input type="text"></input>
+                <button id="submit-score" class="quiz-controls hide">Submit</button>
+            </form>
 
         </div>
 
