@@ -217,6 +217,8 @@ function timer()
 
 $("#highscore").on("click", function() {
     $(".homepage").hide(); 
+    $("#question").hide();
+    $(".button").hide();
     $("#highscore-page").show(); 
     $("#back").show();
     $("#clear").show(); 
