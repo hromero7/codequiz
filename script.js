@@ -15,8 +15,6 @@ var currentAnswer = 0;
 console.log($("#choiceB").val()); 
 
 
-
-
 var quizQuestions = [
     {
       question: "JavaScript is ECMAScript", 
@@ -169,10 +167,7 @@ function timer()
     });
 
 
-
-    
-
-
+// on click funtion for Answer buttons
 
     $(".button").on("click", function() {
         $("#question").hide();
@@ -212,7 +207,7 @@ function timer()
             $("#game-over").show();
             $("#final-score").text("Your Final Score is " + count); 
             $("#time").hide(); 
-
+            clearInterval(counter); 
         };
         
 
@@ -253,12 +248,6 @@ $("#submit-score").on("click", function(event) {
     $("#submitted-score").text(localStorage.getItem("getValue") + ": " + count); 
 
 })
-
-
-
-
-
-
 
 
 });
