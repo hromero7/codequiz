@@ -10,6 +10,8 @@ var currentQuestion = 1;
 
 var currentChoices = 1; 
 
+var currentAnswer = 0; 
+
 console.log($("#choiceB").val()); 
 
 
@@ -177,15 +179,17 @@ function timer()
         // $(".new-question").show(); 
 
         var i = 0; 
+        
 
-        if($(this).attr("value") == quizQuestions[i].correctAnswer) {
+        if($(this).attr("value") == quizQuestions[currentAnswer].correctAnswer) {
             console.log("this is correct"); 
-            i++;
+            currentAnswer++;
         } else {
             console.log("this is not correct"); 
-            i++;
             count = count - 10; 
+            currentAnswer++; 
         };
+        
 
         var newQuestion = $("<div>");
         newQuestion.attr("id", "question");
@@ -258,3 +262,4 @@ $("#submit-score").on("click", function(event) {
 
 
 });
+
